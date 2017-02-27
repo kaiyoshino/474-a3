@@ -69,7 +69,7 @@ function toggleTicker(ticker) {
 		  return d;
 		}, function(error, data) {
 		  if (error) throw error;
-
+		  	console.log(ticker.childNodes[0].style.fill)
 		  	focus.select("path.line").remove();
 
 			// add line
@@ -78,7 +78,7 @@ function toggleTicker(ticker) {
 				.attr("class", "line")
 				.attr("id", "line-" + ticker.getAttribute("id"))
 				.attr("fill", "none")
-				.attr("stroke", "steelblue")
+				.attr("stroke", ticker.childNodes[0].style.fill) // get color by id
 				.attr("stroke-linejoin", "round")
 				.attr("stroke-linecap", "round")
 				.attr("stroke-width", 1.5)
