@@ -22,13 +22,24 @@
 		.clicked {
 			opacity: .75;
 		}
+
+		.area {
+/*		  fill: steelblue;*/
+		  clip-path: url(#clip);
+		}
+
+		.zoom {
+		  cursor: move;
+		  fill: none;
+		  pointer-events: all;
+		}
 	</style>
 	</head>
 	<body>
 		<div id="layout">
-			<svg class="chart"></svg>
 		</div>
 
-	</body>
 	<script src="a3.js"></script>
+	</body>
+	
 </html>
