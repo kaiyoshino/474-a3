@@ -5,9 +5,11 @@
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+		<link rel="shortcut icon" href="">
 	<style>
 		body {
 			text-align: center;
+			background-color: #F1F3F3;
 		}
 
 		.arc text {
@@ -20,12 +22,7 @@
 		}
 
 		.clicked {
-			opacity: .75;
-		}
-
-		.area {
-/*		  fill: steelblue;*/
-		  clip-path: url(#clip);
+			opacity: .60;
 		}
 
 		.zoom {
@@ -33,6 +30,39 @@
 		  fill: none;
 		  pointer-events: all;
 		}
+
+		.d3-tip {
+		  line-height: 1;
+		  font-weight: bold;
+		  padding: 12px;
+		  background: rgba(0, 0, 0, 0.8);
+		  color: #fff;
+		  border-radius: 2px;
+		}
+
+
+		.overlay {
+			fill: none;
+			pointer-events: all;
+		}
+
+/*		.toolTip {
+			position: absolute;
+			display: none;
+			width: 80px;
+			height: 28px;
+			background: lightsteelblue;
+			border: 1px solid #6F257F;
+			padding: 14px;
+			text-align: center;
+		}*/
+
+		.tooltip circle {
+		  fill: none;
+		  stroke: steelblue;
+		}
+
+
 	</style>
 	</head>
 	<body>
