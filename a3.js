@@ -24,6 +24,7 @@ var pie = d3.pie()
 
 // add doughnut chart to canvas
 var chart1 = d3.select("body").append("svg")
+	.attr("id", "chart1")
 	.attr("width", width + margin.left + margin.right)
 	.attr("height", height + margin.top)
 		.append("g")
@@ -40,7 +41,6 @@ d3.csv("assets.csv", type, function(error, data) {
 		.attr("id", function(d) { return d.data.tick })
 		.attr("class", "arc")
 		.on("click", function(d) {
-			chart1.selectAll(".arc").classed("clicked", false)
 			toggleTicker(this)
 		});
 
@@ -62,8 +62,13 @@ function type(d) {
 // toggle specific stock lines on chart2 by clicking arcs
 function toggleTicker(ticker) {
 	if (ticker.classList.contains("clicked")) {
+		ticker.classList.remove("clicked")
 		chart2.selectAll("path#line-" + ticker.getAttribute("id") + "").remove()
 	} else {
+		elements = document.getElementById("chart1").childNodes[0].childNodes
+		for (var i = 0; i < elements.length; i++) {
+			elements[i].classList.remove('clicked');
+		}
 		d3.csv("./data/" + ticker.getAttribute("id").toLowerCase()  + ".csv", function(d) {
 		  d.date = parseTime(d.date);
 		  d.adj_close = +d.adj_close;
@@ -84,8 +89,8 @@ function toggleTicker(ticker) {
 				.attr("stroke-width", 1.5)
 				.attr("d", line);
 		});
+		ticker.classList.add("clicked");
 	}
-	ticker.classList.toggle("clicked")
 }
 
 
