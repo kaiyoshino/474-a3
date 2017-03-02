@@ -86,7 +86,7 @@ function toggleTicker(ticker) {
 				.attr("stroke", ticker.childNodes[0].style.fill) // get color by id
 				.attr("stroke-linejoin", "round")
 				.attr("stroke-linecap", "round")
-				.attr("stroke-width", 1.5)
+				.attr("stroke-width", 3)
 				.attr("d", line);
 		});
 		ticker.classList.add("clicked");
@@ -179,7 +179,7 @@ d3.csv("./data/data.csv", function(d) {
 		.attr("stroke", "steelblue")
 		.attr("stroke-linejoin", "round")
 		.attr("stroke-linecap", "round")
-		.attr("stroke-width", 1.5)
+		.attr("stroke-width", 3)
 		.attr("d", portLine);
 
 	// scale range of data
