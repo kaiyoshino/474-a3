@@ -2,10 +2,10 @@
 
 // define canvas variables
 var margin = {top: 20, right: 20, bottom: 80, left: 40};
-	margin2 = {top: 445, right: 20, bottom: 30, left: 40};
+	margin2 = {top: 450, right: 20, bottom: 30, left: 40};
 	width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
-    height2 = 500 - margin2.top - margin2.bottom,
+    height2 = 520 - margin2.top - margin2.bottom,
     radius = Math.min(width, height) / 2;
 
 // pie colors
@@ -96,7 +96,7 @@ var	chart2 = d3.select("body")
 		.attr("id", "chart2")
 		.attr("class", "chart2")
 		.attr("width", width + margin.left * 2 + margin.right)
-		.attr("height", height + margin.top + margin.bottom * 2)
+		.attr("height", height + margin.top + margin.bottom * 2.5)
 	.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
