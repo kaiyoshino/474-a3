@@ -1,8 +1,8 @@
 
 
 // define canvas variables
-var margin = {top: 20, right: 20, bottom: 110, left: 40};
-	margin2 = {top: 430, right: 20, bottom: 30, left: 40};
+var margin = {top: 20, right: 20, bottom: 70, left: 40};
+	margin2 = {top: 450, right: 20, bottom: 30, left: 40};
 	width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
     height2 = 500 - margin2.top - margin2.bottom,
@@ -25,7 +25,7 @@ var pie = d3.pie()
 // add doughnut chart to canvas
 var chart1 = d3.select("body").append("svg")
 	.attr("width", width + margin.left + margin.right)
-	.attr("height", height + margin.top + margin.bottom)
+	.attr("height", height + margin.top)
 		.append("g")
 	.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
