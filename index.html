@@ -7,30 +7,38 @@
 		<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 		<link rel="shortcut icon" href="">
 	<style>
+		.blue {
+			color: #3f75a2;
+		}
+		.intro p {
+			margin-right: 10em;
+			padding-left: 10em;
+
+		}
 		body {
 			text-align: center;
 			background-color: #F1F3F3;
 		}
-
 		.arc text {
-		  font: 12px sans-serif;
+		  font: 14px sans-serif;
 		  text-anchor: middle;
 		}
+		.tooltip-rect-text-1, .tooltip-rect-text-2, .tooltip-rect-text-3 , .tooltip-rect-text-4 , .tooltip-rect-text-5 , .tooltip-rect-text-6  {
+		  font: 10px sans-serif;
+		  /*text-anchor: left;*/
 
+		}
 		.arc path {
 		  stroke: #fff;
 		}
-
 		.clicked {
 			opacity: .60;
 		}
-
 		.zoom {
 		  cursor: move;
 		  fill: none;
 		  pointer-events: all;
 		}
-
 		.d3-tip {
 		  line-height: 1;
 		  font-weight: bold;
@@ -39,39 +47,27 @@
 		  color: #fff;
 		  border-radius: 2px;
 		}
-
 		.selection {
 			border: none;
 			opacity: .5;
 		}
-
-
 		.overlay {
 			fill: none;
 			pointer-events: all;
 		}
-
-/*		.toolTip {
-			position: absolute;
-			display: none;
-			width: 80px;
-			height: 28px;
-			background: lightsteelblue;
-			border: 1px solid #6F257F;
-			padding: 14px;
-			text-align: center;
-		}*/
-
-		.tooltip circle {
-		  fill: none;
-		  stroke: steelblue;
+		.tooltip-rect {
+			stroke: #000;
+			stroke-width: 1;
+			fill: #FFFFFF;
 		}
 
 
 	</style>
 	</head>
 	<body>
-		<div id="layout">
+		<div class="intro">
+			<h1>Investment Portfolio</h1>
+			<p>This visualization displays investment assets over time as a portfolio. Portfolio visualizations are a fundamental tool in investing. They allow users to get a broad look at the diversification and value of their investments in real time. The <a class="blue">blue</a> line in the line chart represents the value of the portflio. Click any asset in the doughnut chart to see its value over time. You can zoom in one a given time by sliding and dragging the grey bar below the line chart or scrolling over the line chart</p>
 		</div>
 
 	<script src="a3.js"></script>
